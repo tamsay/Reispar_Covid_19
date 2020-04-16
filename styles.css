@@ -1,0 +1,128 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(246, 247, 244);
+    padding: 1rem;
+}
+a{
+    border-right: 1px solid #000000;
+    padding: 5px;
+}
+#logo{
+    background-color: lightcoral;
+    width: fit-content;
+}
+#powerBiDiv{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-around; 
+    width: 100%;
+    /* box-sizing: border-box; */
+    
+}
+.powerBi{
+    background-color: rgb(160, 124, 226);
+    height: 50vh;
+    width: 30%;
+    margin: 10px 5px;
+    box-sizing: border-box;
+}
+
+  @media all and (max-width: 1280px) {
+    /* For mobile phones: */
+    .powerBi{
+        width: 100%;
+    }
+    
+  }
+
+  #tabularResult{
+    display: flex;
+    background-color: olive;
+    justify-content: center;
+    height: 15vh;
+}
+.table{
+    text-align: center;
+}
+#newsFeed{
+    background-color: peru;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* height: 15vh; */
+    /* font-size: 10px; */
+}
+.news {
+	width: 100px;
+	margin: 2px;
+	padding: 5px;
+    border: 1px solid lightgrey;
+    text-align: center;
+}
+.news h2{
+    font-size: 8px;
+}
+.news img {
+	max-width: 75px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+[data-tab-content] {
+    display: none;
+  }
+  
+  .active[data-tab-content] {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 1px;
+    padding: 5px;
+    border-bottom: 1px solid black;
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 3px;
+    font-size: 1em;
+    text-align: center;
+  }
+  @media only screen and (max-width: 640px) {
+    /* For mobile phones: */
+    .tab{
+        width: 100%;
+        font-size: 0.75em;
+
+    }
+  }
+  
+  .tab.active {
+    background-color: #CCC;
+  }
+  
+  .tab:hover {
+    background-color: #AAA;
+  }
+  
+  .tab-content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
