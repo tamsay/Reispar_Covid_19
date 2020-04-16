@@ -2,6 +2,13 @@ body{
     display: flex;
     flex-direction: column;
 }
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+
+
 header{
     display: flex;
     justify-content: space-between;
@@ -16,7 +23,7 @@ a{
     background-color: lightcoral;
     width: fit-content;
 }
-#powerBiDiv{
+#resultSection{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -27,7 +34,7 @@ a{
     /* box-sizing: border-box; */
     
 }
-.powerBi{
+.resultDisplay{
     background-color: rgb(160, 124, 226);
     height: 50vh;
     width: 30%;
