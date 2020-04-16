@@ -44,7 +44,7 @@ a{
 
   @media all and (max-width: 1280px) {
     /* For mobile phones: */
-    .powerBi{
+    .resultDisplay{
         width: 100%;
     }
     
