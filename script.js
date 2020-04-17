@@ -47,3 +47,47 @@ fetch(req)
 .then(function(response) {
 console.log(response.json());
 })
+
+const displayData = () => {
+  
+  fetch('https://cors-anywhere.herokuapp.com/https://reisparcovid19.herokuapp.com?continent=world')
+  .then((res) => res.json())
+  .then((data) => {
+    let output = '<h2>World Stats</h2>';
+    data.output += `
+        <ul>
+          <li>${stat.Total_Cases}<li>
+          <li>${stat.Total_Recovered}<li>
+        </ul>  
+    `;
+    document.getElementById('resultDisplay').innerHTML = output;
+  });
+  
+}
+
+//this function fetches data from the reispar covid API
+const worldData = () => {
+  
+  fetch('https://cors-anywhere.herokuapp.com/https://reisparcovid19.herokuapp.com?continent=world')
+  .then((res) => res.json())
+  .then((data) => {
+    let output = '<h2>COvid Stats</h2>';
+    data.forEach(function(stat){
+      output += `
+        <table>
+        <tr>
+          <td>${stat.Country}</td>
+          <td>${stat.Total_Cases}</td>
+          <td>${stat.Total_Recovered}</td>
+          <td>${stat.Active_Cases}</td>
+          <td>${stat.Serious}</td>
+        </tr>
+       </table>
+      `;
+    })
+    document.getElementById('countryStatistics').innerHTML = output;
+  });
+  
+}
+
+worldData();
