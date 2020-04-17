@@ -98,6 +98,14 @@ li:hover{
       margin: 5px 15px;
   }
 }
+@media all and (max-width: 960px) {
+  /* For mobile phones: */
+  .resultDisplay{
+      width: 100%;
+      height: 300px;
+      margin: 5px 15px;
+  }
+}
 #covidTableSection{
   display: flex;
   flex-direction: column;
