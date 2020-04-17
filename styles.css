@@ -136,10 +136,9 @@ li:hover{
   color: white;
   font-size: 15px;
 }
-
-#newsFeedSection h2{
-  color: white;
-  font-weight: bolder;
+#newsFeedSection{
+  margin: 10px 0px;
+  /* border: 1px solid white; */
 }
 #newsFeed{
     display: flex;
@@ -162,10 +161,13 @@ li:hover{
 } 
 */
 .news h2{
-    font-size: 10px;
+    font-size: 12px;
+    color: white;
+  font-weight: bold;
 }
 .news p{
   font-size: 10px;
+  
 }
 .imageLink {
   width: 100%;
@@ -211,6 +213,51 @@ footer > p{
   width: 1.5em;
   height: 1.5em;
   margin: 0px 5px 0px 0px;
+}
+@media all and (max-width: 640px) {
+  /* For mobile phones: */
+  .icon{
+    width: 1em;
+    height: 1em;
+    margin: 2px;
+    color: white;
+    background-color: white;
+  }
+  
+  #contactDetails p{
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 0.75em;
+  }
+  #contactDetails .icon{
+    width: 1em;
+    height: 1em;
+    margin: 0px 2.5px 0px 0px;
+  } 
+}
+@media all and (max-width: 480px) {
+  /* For mobile phones: */
+  .icon{
+    width: 1em;
+    height: 1em;
+    margin: 2px;
+    color: white;
+    background-color: white;
+  }
+  
+  #contactDetails p{
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 0.75em;
+  }
+  #contactDetails .icon{
+    width: 1em;
+    height: 1em;
+    margin: 0px 2.5px 0px 0px;
+  }
+  
 }
 
 [data-tab-content] {

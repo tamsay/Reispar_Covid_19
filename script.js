@@ -32,7 +32,6 @@ const recievedNews = (newsdata) => {
       url.setAttribute('href', `${article.url}`)
       url.setAttribute('target', '_blank')
 
-
       url.innerText = `Click To Visit Page`;
       urlParagraph.appendChild(url);
 
