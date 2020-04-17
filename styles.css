@@ -1,92 +1,176 @@
 body{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    background-color: black;
 }
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-
 
 header{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(246, 247, 244);
-    padding: 1rem;
+    align-items: center;
+    /* background-color: black; */
+
+    padding: 0.5rem;
 }
-a{
-    border-right: 1px solid #000000;
-    padding: 5px;
+.navbar{
+  padding: 5px;
+  /* background-color: blue; */
 }
-#logo{
+
+.navbar-toggler {
+  background-color: rgb(57, 123, 247);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  margin: 0px;
+  font-weight: bolder;
+}
+.navbar-toggler span{
+  display: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#navbarNav{
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 3px solid white;
+  /* background-color: blue; */
+}
+nav li{
+    margin: 0px 5px;
+    background-color: rgb(57, 123, 247);
+    border-radius: 5px 5px 0px 0px;
+    color: black;
+    margin: 2px;
+}
+.nav-link{
+  font-weight: bolder;
+  color:white;
+}
+li:hover{
+  background-color: black;
+  /* background-color: rgb(157, 252, 165); */
+}
+#logo img{
     background-color: lightcoral;
-    width: fit-content;
+    width: 50px;
+    height: 50px;
 }
 #resultSection{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0px;
-    margin: 0px;
-    justify-content: space-around; 
+    justify-content: space-evenly; 
     width: 100%;
+    /* background-color: yellow; */
     /* box-sizing: border-box; */
     
 }
 .resultDisplay{
-    background-color: rgb(160, 124, 226);
-    height: 50vh;
-    width: 30%;
-    margin: 10px 5px;
+    background-color:whitesmoke;
+    height: 75vh;
+    width: 31%;
+    margin: 5px 2.5px;
     box-sizing: border-box;
+    border-radius: 5px;
 }
-
-  @media all and (max-width: 1280px) {
+@media all and (max-width: 1280px) {
     /* For mobile phones: */
     .resultDisplay{
-        width: 100%;
-    }
-    
+        width: 40%;
+        margin: 5px 2.5px;
+    }  
+}
+@media all and (max-width: 960px) {
+  /* For mobile phones: */
+  .resultDisplay{
+      width: 100%;
+      margin: 5px 15px;
   }
-
-  #tabularResult{
-    display: flex;
-    background-color: olive;
-    justify-content: center;
-    height: 15vh;
+}
+#covidTableSection{
+  display: flex;
+  flex-direction: column;
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+    /* background-color: indianred; */
+}
+#covidTableSection h1{
+  color: white;
+  font-weight: bolder;
 }
 .table{
-    text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* border: 1px solid red; */
+  margin: 0px;
+  height: 400px;
+  /* background-color: khaki; */
+  color: white;
+  font-size: 15px;
+}
+
+#newsFeedSection h2{
+  color: white;
+  font-weight: bolder;
 }
 #newsFeed{
-    background-color: peru;
+    /* background-color: peachpuff; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* height: 15vh; */
+    height: auto;
+    margin: 0px;
+    padding: 5px;
+    /* overflow-x: auto;
+    overflow-x: auto; */
     /* font-size: 10px; */
 }
 .news {
-	width: 100px;
-	margin: 2px;
+	width: 150px;
+	margin: 5px;
 	padding: 5px;
-    border: 1px solid lightgrey;
+    border: 1px solid black;
     text-align: center;
 }
 .news h2{
     font-size: 8px;
 }
+.news p{
+  font-size: 8px;
+}
 .news img {
 	max-width: 75px;
 }
 
+
 footer{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  /* color: white; */
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bolder;
+  padding: 10px;
+  margin: 0px 5px 5px 5px;
+  /* background-color: rgba(255,255,255, 0.3); */
+}
+footer > p{
+  padding: 0px;
+  margin: 0px;
 }
 
-
+.icon{
+  width: 2em;
+  height: 2em;
+  margin: 10px;
+  color: white;
+  background-color: white;
+}
 [data-tab-content] {
     display: none;
   }
@@ -100,9 +184,11 @@ footer{
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    margin: 1px;
-    padding: 5px;
+    margin: 0px;
+    padding: 2px 0px 0px 0px;
     border-bottom: 1px solid black;
+    font-weight: bolder;
+    font-size: 1em;
   }
   
   .tab {
@@ -113,23 +199,23 @@ footer{
   }
   @media only screen and (max-width: 640px) {
     /* For mobile phones: */
-    .tab{
+    .tabs{
         width: 100%;
         font-size: 0.75em;
-
     }
   }
-  
   .tab.active {
-    background-color: #CCC;
+    background-color: rgb(57, 123, 247);
+    border-radius: 5px 5px 0px 0px;
+
   }
   
   .tab:hover {
-    background-color: #AAA;
+    background-color: rgb(157, 252, 165);
   }
   
   .tab-content {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   

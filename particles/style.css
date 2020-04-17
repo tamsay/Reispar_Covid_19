@@ -1,0 +1,11 @@
+#particles-js{
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  
+  background-color: black;
+  background-size: cover; 
+  background-position: 50% 50%; 
+  background-repeat: no-repeat;
+}
+
