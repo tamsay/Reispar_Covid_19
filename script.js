@@ -15,35 +15,45 @@ tabs.forEach(tab => {
   })
 })
 
-// const key = "e6ef2cde327f46e3820d0344025b79fc"
-// const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${key}`
-
-
 const recievedNews = (newsdata) => {
     const articlesDiv = document.querySelector("#newsFeed")
     newsdata.articles.forEach((article) => {
 			
-			//Here we create and add html elements to our html file
-      const div = document.createElement("div")
+      const div = document.createElement("div");
+      const title = document.createElement('h2');
+      const image = document.createElement('img')
+      const url = document.createElement('a')
+      const imageLink = document.createElement('a')
+      const urlParagraph = document.createElement('p');
+
       div.className = "news"
-      div.innerHTML = `
-      <h2>${article.title}</h2>
-			<img src="${article.urlToImage}"/>`
+      image.className = 'imageLink'
+      
+      url.setAttribute('href', `${article.url}`)
+      url.setAttribute('target', '_blank')
+
+
+      url.innerText = `Click To Visit Page`;
+      urlParagraph.appendChild(url);
+
+      title.innerText = `${article.title}`
+
+      image.setAttribute('src', `${article.image}`);
+      imageLink.appendChild(image);
+      imageLink.setAttribute('href', `${article.url}`)
+      imageLink.setAttribute('target', '_blank')
+
+      div.appendChild(title);
+      div.appendChild(urlParagraph);
+      div.appendChild(imageLink);
       articlesDiv.appendChild(div)
     })
 }
 
-var url = 'http://newsapi.org/v2/top-headlines?' +
-  'country=us&' +
-  'apiKey=95652013248a41419ede93837e41b30d';
-//Fetch sends a request to the API.
-//Promise makes it possible to run this in the background. När vi får APIet då går den vidare och skickar tillbaka JSON.
-fetch(url)
-  .then(response => response.json())
-  .then(recievedNews)
-
-var req = new Request(url);
-fetch(req)
-.then(function(response) {
-console.log(response.json());
-})
+fetch('https://gnews.io/api/v3/search?q=example&token=b0f2424c549bcfcad8558f929836b197')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        recievedNews(data)
+    });
