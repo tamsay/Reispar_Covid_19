@@ -49,17 +49,47 @@ const recievedNews = (newsdata) => {
       articlesDiv.appendChild(div)
     };
 
-    for(let x=0; x < newsdata.articles.length; x++){
+    for(let x=0; x <= newsdata.articles.length; x++){
       let article = newsdata.articles[x];
       
       if( x === 0){
-        console.log('index 0');
         let name = "news carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active"
         createArticle(article, name)
       }
-      else{
+      else if((x >= 1) && (x < newsdata.articles.length)){
         let name = "news carousel-item col-12 col-sm-6 col-md-4 col-lg-3"
         createArticle(article,name)
+      }
+      else {
+        let name = "news carousel-item col-12 col-sm-6 col-md-4 col-lg-3"
+        // createArticle(article,name)
+        const div = document.createElement("div");
+        const title = document.createElement('h2');
+        const image = document.createElement('img')
+        const url = document.createElement('a')
+        const imageLink = document.createElement('a')
+        const urlParagraph = document.createElement('p');
+
+        div.className = name
+        
+        url.setAttribute('href', `https://ourworldindata.org/covid-testing`)
+        url.setAttribute('target', '_blank')
+
+        url.innerText = `Click To Visit Page`;
+        urlParagraph.appendChild(url);
+
+        title.innerText = `To understand the global pandemic, we need global testing – the Our World in Data COVID-19 Testing dataset`
+
+        image.className = 'imageLink img-fluid mx-auto d-block'
+        image.setAttribute('src', `https://ourworldindata.org/default-thumbnail.jpg`);
+        imageLink.appendChild(image);
+        imageLink.setAttribute('href', `https://ourworldindata.org/covid-testing`)
+        imageLink.setAttribute('target', '_blank')
+
+        div.appendChild(title);
+        div.appendChild(urlParagraph);
+        div.appendChild(imageLink);
+        articlesDiv.appendChild(div)
       }
     };
 }
@@ -73,7 +103,7 @@ const recievedNews = (newsdata) => {
 //         recievedNews(data)
 //     });
 
-    fetch('    https://newsapi.org/v2/everything?q=covid-19 AND coronavirus&apiKey=95652013248a41419ede93837e41b30d')
+    fetch('    https://newsapi.org/v2/everything?q=covid-19 AND coronavirus&pageSize=8&apiKey=95652013248a41419ede93837e41b30d')
     .then(function (response) {
         return response.json();
     })
