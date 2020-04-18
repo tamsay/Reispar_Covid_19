@@ -12,6 +12,7 @@ header{
     /* background-color: black; */
 
     padding: 0.5rem;
+    margin: 0px;
 }
 .navbar{
   padding: 5px;
@@ -74,7 +75,6 @@ li:hover{
     /* background-color:rgb(255, 247, 235); */
     height: 640px;
     width: 100%;
-    padding: 10px 10px;
     margin: 5px 10px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -90,7 +90,7 @@ iframe{
   border: 5px solid black;
   border-radius: 10px;
 }
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1200px) {
     /* For mobile phones: */
     .resultDisplay{
         width: 100%;
@@ -127,11 +127,11 @@ iframe{
       margin: 5px 15px;
   }
 }
-@media all and (max-width: 480px) {
+@media all and (min-width: 40px) and (max-width:480) {
   /* For mobile phones: */
   .resultDisplay{
       width: 100%;
-      height: 150px;
+      height: 10px;
       margin: 5px 15px;
   }
   iframe{
@@ -141,6 +141,8 @@ iframe{
     border-radius: 10px;
   }
 }
+
+
 #covidTableSection{
   display: flex;
   flex-direction: column;
