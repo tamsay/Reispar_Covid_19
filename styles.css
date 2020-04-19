@@ -1,94 +1,115 @@
+.navbar-custom {
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: white;
+  font-weight: bold;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link {
+  color: black;
+  font-weight: bold;
+}
+.navbar-custom .nav-item:hover .nav-link {
+  color: rgb(88, 243, 166);
+}
+
 body{
-    display: flex;
-    flex-direction: column;
+    display: flex; 
+    flex-direction: column; 
     text-align: center;
-    background-color: black;
 }
 
 header{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* background-color: black; */
-
     padding: 0.5rem;
     margin: 0px;
 }
 .navbar{
   padding: 5px;
-  /* background-color: blue; */
 }
 
-.navbar-toggler {
+.nav-item{
+  margin: 0px 2px;
+  width: 110px;
+  font-size: 15px;
   background-color: rgb(57, 123, 247);
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  padding: 5px;
-  margin: 0px;
-  font-weight: bolder;
-}
-.navbar-toggler span{
-  display: none;
-  padding: 0px;
-  margin: 0px;
+  border-radius: 5px 5px 0px 0px;  
 }
 
-#navbarNav{
+li:hover{
+  background-color: black;
+  
+/* background-color: rgb(157, 252, 165); */
+}
+
+#logo img{
+  width: 50px;
+  height: 50px;
+}
+#navbarTogglerDemo01{
   padding: 0px;
   margin: 0px;
   border-bottom: 3px solid white;
-  /* background-color: blue; */
 }
-nav li{
-    margin: 0px 5px;
+
+
+@media all and (max-width: 992px){
+  .navbar{
+    padding: 0px;
+    margin: 0px;
     width: 110px;
+  }
+  
+  #navbarTogglerDemo01{
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+  }
+  .nav-item{
+    margin: 0px 0px 2px 0px;
     font-size: 15px;
     background-color: rgb(57, 123, 247);
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 0px 0px 0px;
     color: black;
-    margin: 2px;
 }
-.nav-link{
-  font-weight: bolder;
-  color:white;
+
+.navbar-toggler-icon{
+  background-color: white;
 }
-li:hover{
-  background-color: black;
-  /* background-color: rgb(157, 252, 165); */
+  
 }
-#logo img{
-    background-color: lightcoral;
-    width: 50px;
-    height: 50px;
-}
+
 #resultSection{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0px;
     justify-content: space-evenly; 
-    width: 100%;
-    /* background-color: yellow; */
-    /* box-sizing: border-box; */
-    
+    width: 100%;    
 }
 .resultDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* background-color:rgb(255, 247, 235); */
     height: 640px;
     width: 100%;
     margin: 5px 10px;
     box-sizing: border-box;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
+    border-radius: 10px; 
 }
 iframe{
-  /* width: 100%;
-  height: 100%; */
   border: 5px solid black;
   border-radius: 10px;
 }
@@ -100,12 +121,11 @@ iframe{
         margin: 5px 10px;
     }  
     iframe{
-       width: 90%;
+      width: 90%;
       height: 100%;
       border: 5px solid black;
       border-radius: 10px;
     }
-    
 }
 @media all and (max-width: 960px) {
   /* For mobile phones: */
@@ -120,7 +140,6 @@ iframe{
     width: 95%;
   }
 }
-
 @media all and (max-width: 640px) {
   /* For mobile phones: */
   .resultDisplay{
@@ -146,51 +165,52 @@ iframe{
 
 
 #covidTableSection{
-  display: flex;
+  /* display: grid;
   flex-direction: column;
     text-align: center;
     margin: 0px;
-    padding: 5px;
-    /* background-color: indianred; */
+    padding: 0px; */
+    height: max-content;
 }
 #covidTableSection h1{
   color: white;
   font-weight: bolder;
+  margin: 0px;
 }
 .table{
   overflow-x: hidden;
   overflow-y: auto;
-  /* border: 1px solid red; */
-  margin: 0px;
-  height: 400px;
-  /* background-color: khaki; */
+  width: 100%;
+  margin: 10px;
   color: white;
   font-size: 15px;
+  height: max-content;
 }
+
 #newsFeedSection{
   margin: 10px 0px;
-  /* border: 1px solid white; */
+  border: 1px solid white;
 }
 #newsFeed{
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     height: auto;
     margin: 0px;
-    padding: 5px;
+    padding: 2.5px;
 }
-/* .news {
+.news {
+    display: flex;
+    flex-direction: column;
     width: 20%;
-    margin: 5px;
-    padding: 5px;
+    margin: 7.5px;
+    padding: 0px;
     height: 100%;
     border: 1px solid white;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; 
 } 
-*/
+
 .news h2{
     font-size: 12px;
     color: white;
@@ -202,8 +222,8 @@ iframe{
 }
 .imageLink {
   width: 100%;
-  max-height: 50%;
-  box-sizing: border-box;
+  /* max-height: 50%; */
+  /* box-sizing: border-box; */
 }
 
 footer{
@@ -348,9 +368,6 @@ footer > p{
   
 
 
-
-
-
   /*
     code by Iatek LLC 2018 - CC 2.0 License - Attribution required
     code customized by Azmind.com
@@ -482,3 +499,12 @@ footer > p{
       visibility: visible;
   }
 }
+
+.colorme {
+  color: red;
+}
+
+.navbar .nav > li > a {
+  color:          lightgray;
+  text-shadow:    none;
+  }

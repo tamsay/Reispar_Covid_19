@@ -94,21 +94,11 @@ const recievedNews = (newsdata) => {
     };
 }
 
-// fetch('https://gnews.io/api/v3/search?q=covid-19 | coronavirus?&token=b0f2424c549bcfcad8558f929836b197')
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (data) {
-//       console.log(data)
-//         recievedNews(data)
-//     });
-
     fetch('    https://newsapi.org/v2/everything?q=covid-19 AND coronavirus&pageSize=8&apiKey=95652013248a41419ede93837e41b30d')
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-      console.log(data)
         recievedNews(data)
     });
 
@@ -140,3 +130,48 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
       }
   }
 });
+
+
+
+const createTable=(tableData)=>{
+  $("#countryStatistics").tabulator({
+    // responsiveLayout:true,
+    autoResize: true,
+    height: 400,
+    virtualDomBuffer:300,
+    placeholder: 'Data Loading',
+    layout:"fitColumns",
+    // layout:"fitData",
+
+    columns:[
+      {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:true},
+      {title:"Total Cases", field:"Total_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+      {title:"Total Deaths", field:"Total_Deaths", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+      {title:"Total Recovered", field:"Total_Recovered", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+      {title:"Active Cases", field:"Active_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+      {title:"Serious/Critical", field:"Serious/Critical", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+      {title:"Continents", field:"Continents", align:"center", sorter: 'string', editor:false},
+    ],
+  });
+
+  $("#countryStatistics").tabulator('setData', tableData)
+}
+
+$(window).resize(function(){
+  $("#countryStatistics").tabulator("redraw", true); //trigger full rerender including all data and rows
+});
+
+
+var myHeaders = new Headers();
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+fetch("https://reisparcovid19.herokuapp.com?continent=world", requestOptions)
+  .then(response => response.json())
+  .then(result =>{
+  createTable(result);
+  }) 
+  .catch(error => console.log('error', error));
+  
