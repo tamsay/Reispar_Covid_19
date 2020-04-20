@@ -102,33 +102,30 @@ const recievedNews = (newsdata) => {
        // recievedNews(data)
     });
 
-
-    
-
 const createTable=(tableData)=>{
-  $("#countryStatistics").tabulator({
-    // responsiveLayout:true,
-    // responsiveLayout:"hide",
-    // autoResize: true,
-    height: 400,
-    
-    virtualDomBuffer:300,
-    placeholder: 'Data Loading',
-    layout:"fitColumns",
-    layout:"fitDataFill",
-
-    columns:[
-      {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:false},
-      {title:"Total Cases", field:"Total_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
-      {title:"Total Deaths", field:"Total_Deaths", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
-      {title:"Total Recovered", field:"Total_Recovered", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
-      {title:"Active Cases", field:"Active_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
-      {title:"Serious/Critical", field:"Serious/Critical", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
-      {title:"Continents", field:"Continents", align:"center", sorter: 'string', editor:false},
-    ],
-  });
-
-  $("#countryStatistics").tabulator('setData', tableData)
+  
+    $("#countryStatistics").tabulator({
+      // responsiveLayout:true,
+      // responsiveLayout:"hide",
+      autoResize: true,
+      height: 400,
+      virtualDomBuffer:300,
+      placeholder: 'Data Loading',
+      // layout:"fitColumns",
+      layout:"fitDataStretch",
+  
+      columns:[
+        {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:false},
+        {title:"Total Cases", field:"Total_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Total Deaths", field:"Total_Deaths", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Total Recovered", field:"Total_Recovered", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Active Cases", field:"Active_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Serious/Critical", field:"Serious/Critical", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Continents", field:"Continents", align:"center", sorter: 'string', editor:false},
+      ],
+    });
+  
+    $("#countryStatistics").tabulator('setData', tableData)
 }
 
 $(window).resize(function(){
