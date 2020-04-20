@@ -191,7 +191,7 @@ iframe{
     padding: 0px 10px;
     height: max-content;
     margin: 0px;
-    width: 75%;
+    width: 95%;
 }
 #covidTableSection h1{
   color: white;
@@ -205,7 +205,11 @@ iframe{
   border-radius: 10px;
   height: 400px;
   /* padding: 5px 50px; */
-  
+}
+@media only screen and (max-width:320px){
+    #covidTableSection{
+      /* background-color: red; */
+    }
 }
 #newsFeedSection{
   margin: 10px 0px;

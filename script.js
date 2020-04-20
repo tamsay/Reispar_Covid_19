@@ -118,7 +118,7 @@ const createTable=(tableData)=>{
     layout:"fitDataFill",
 
     columns:[
-      {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:true},
+      {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:false},
       {title:"Total Cases", field:"Total_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
       {title:"Total Deaths", field:"Total_Deaths", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
       {title:"Total Recovered", field:"Total_Recovered", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
