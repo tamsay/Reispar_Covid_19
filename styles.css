@@ -208,7 +208,7 @@ iframe{
 }
 @media only screen and (max-width:320px){
     #covidTableSection{
-      /* background-color: red; */
+      background-color: red;
     }
 }
 #newsFeedSection{
