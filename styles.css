@@ -390,3 +390,52 @@ footer > p{
     margin-right: 0px;
   }
   
+
+  #sourcesDiv{
+    /* background-color: greenyellow; */
+    margin-top: 50px;
+  }
+
+  #sourcesDiv h2{
+    font-size: 5em;
+    color: white;
+  }
+      
+.sourcesGroup{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+.source{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  width: 25%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  height: 300px;
+}
+.source:hover{
+border: 1px solid rgb(80, 171, 247);
+}
+.sourceImage{
+    width: 50%;
+    margin: 0px 0px 5px 0px;
+}
+.sourceHeading{
+    font-weight: bold;
+    color: white;
+    font-weight: bold;
+}
+.source a{
+  text-decoration: none;
+}
+.description{
+  text-align: center;
+  color: white;
+}
