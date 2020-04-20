@@ -115,7 +115,7 @@ const createTable=(tableData)=>{
     virtualDomBuffer:300,
     placeholder: 'Data Loading',
     layout:"fitColumns",
-    // layout:"fitDataFill",
+    layout:"fitDataFill",
 
     columns:[
       {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:true},

@@ -371,7 +371,7 @@ footer > p{
     /* For mobile phones: */
     .tabs{
         width: 100%;
-        font-size: 0.5em;
+        font-size: 0.75em;
     }
   }
   .tab.active {
