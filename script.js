@@ -99,49 +99,23 @@ const recievedNews = (newsdata) => {
         return response.json();
     })
     .then(function (data) {
-        recievedNews(data)
+       // recievedNews(data)
     });
 
 
-
-
-    /*
-    Carousel
-*/
-$('#carousel-example').on('slide.bs.carousel', function (e) {
-  /*
-      CC 2.0 License Iatek LLC 2018 - Attribution required
-  */
-  var $e = $(e.relatedTarget);
-  var idx = $e.index();
-  var itemsPerSlide = 5;
-  var totalItems = $('.carousel-item').length;
-
-  if (idx >= totalItems-(itemsPerSlide-1)) {
-      var it = itemsPerSlide - (totalItems - idx);
-      for (var i=0; i<it; i++) {
-          // append slides to end
-          if (e.direction=="left") {
-              $('.carousel-item').eq(i).appendTo('.carousel-inner');
-          }
-          else {
-              $('.carousel-item').eq(0).appendTo('.carousel-inner');
-          }
-      }
-  }
-});
-
-
+    
 
 const createTable=(tableData)=>{
   $("#countryStatistics").tabulator({
     // responsiveLayout:true,
-    autoResize: true,
+    // responsiveLayout:"hide",
+    // autoResize: true,
     height: 400,
+    
     virtualDomBuffer:300,
     placeholder: 'Data Loading',
     layout:"fitColumns",
-    // layout:"fitData",
+    // layout:"fitDataFill",
 
     columns:[
       {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:true},

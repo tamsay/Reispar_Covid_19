@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: local('./Karla-Bold.ttf'), local('Karla-Bold.woff2'),
+       format('ttf'), format('woff'); 
+}
+
 .navbar-custom {
 }
 /* change the brand and text color */
@@ -22,7 +30,13 @@
 body{
     display: flex; 
     flex-direction: column; 
+    align-items: center;
     text-align: center;
+    text-align: center;
+    background-color: black;
+    font-family: 'Karla', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    width: 100%;
 }
 
 header{
@@ -30,6 +44,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 0.5rem;
     margin: 0px;
 }
@@ -40,7 +55,7 @@ header{
 .nav-item{
   margin: 0px 2px;
   width: 110px;
-  font-size: 15px;
+  font-size: 14px;
   background-color: rgb(57, 123, 247);
   border-radius: 5px 5px 0px 0px;  
 }
@@ -50,10 +65,14 @@ li:hover{
   
 /* background-color: rgb(157, 252, 165); */
 }
-
+#logo{
+  width: auto;
+  text-align: left;
+}
 #logo img{
-  width: 50px;
-  height: 50px;
+  width: 35%;
+  height: 35%;
+
 }
 #navbarTogglerDemo01{
   padding: 0px;
@@ -165,12 +184,14 @@ iframe{
 
 
 #covidTableSection{
-  /* display: grid;
-  flex-direction: column;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0px;
-    padding: 0px; */
+    padding: 0px 10px;
     height: max-content;
+    margin: 0px;
+    width: 75%;
 }
 #covidTableSection h1{
   color: white;
@@ -178,18 +199,16 @@ iframe{
   margin: 0px;
 }
 .table{
-  overflow-x: hidden;
-  overflow-y: auto;
   width: 100%;
-  margin: 10px;
-  color: white;
-  font-size: 15px;
-  height: max-content;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 400px;
+  /* padding: 5px 50px; */
+  
 }
-
 #newsFeedSection{
   margin: 10px 0px;
-  border: 1px solid white;
 }
 #newsFeed{
     display: flex;
@@ -204,10 +223,10 @@ iframe{
     display: flex;
     flex-direction: column;
     width: 20%;
-    margin: 7.5px;
+    margin: 7.5px 10px;
     padding: 0px;
     height: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     text-align: center;
 } 
 
@@ -231,7 +250,8 @@ footer{
   justify-content: space-around;
   align-items: center;
   font-weight: bolder;
-  padding: 10px;
+  width: 100%;
+  padding: 10px 0px;
   margin: 0px 5px 5px 5px;
 }
 footer > p{
@@ -313,6 +333,8 @@ footer > p{
 
 [data-tab-content] {
     display: none;
+    color: white;
+    font-weight: bolder;
   }
   
   .active[data-tab-content] {
@@ -326,9 +348,10 @@ footer > p{
     list-style-type: none;
     margin: 0px;
     padding: 2px 0px 0px 0px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid white;
     font-weight: bolder;
     font-size: 1em;
+    color: white;
   }
   
   .tab {
@@ -354,11 +377,12 @@ footer > p{
   .tab.active {
     background-color: rgb(57, 123, 247);
     border-radius: 5px 5px 0px 0px;
-
+    color: black;
+    font-weight: bolder;
   }
   
   .tab:hover {
-    background-color: rgb(157, 252, 165);
+    background-color: rgb(57, 123, 247);
   }
   
   .tab-content {
@@ -366,145 +390,3 @@ footer > p{
     margin-right: 0px;
   }
   
-
-
-  /*
-    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
-    code customized by Azmind.com
-*/
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Show 4th slide on md if col-md-4*/
-  .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      position: absolute;
-      top: 0;
-      right: -33.3333%;  /*change this with javascript in the future*/
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  /* Show 3rd slide on sm if col-sm-6*/
-  .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
-      position: absolute;
-      top: 0;
-      right: -50%;  /*change this with javascript in the future*/
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-}
-@media (min-width: 576px) {
-  .carousel-item {
-      margin-right: 0;
-  }
-  /* show 2 items */
-  .carousel-inner .active + .carousel-item {
-      display: block;
-  }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
-      transition: none;
-  }
-  .carousel-inner .carousel-item-next {
-      position: relative;
-      transform: translate3d(0, 0, 0);
-  }
-  /* left or forward direction */
-  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-  .carousel-item-next.carousel-item-left + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
-  }
-  /* farthest right hidden item must be also positioned for animations */
-  .carousel-inner .carousel-item-prev.carousel-item-right {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-  /* right or prev direction */
-  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-  .carousel-item-prev.carousel-item-right + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(100%, 0, 0);
-      visibility: visible;
-      display: block;
-      visibility: visible;
-  }
-}
-/* MD */
-@media (min-width: 768px) {
-  /* show 3rd of 3 item slide */
-  .carousel-inner .active + .carousel-item + .carousel-item {
-      display: block;
-  }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-      transition: none;
-  }
-  .carousel-inner .carousel-item-next {
-      position: relative;
-      transform: translate3d(0, 0, 0);
-  }
-  /* left or forward direction */
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
-  }
-  /* right or prev direction */
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(100%, 0, 0);
-      visibility: visible;
-      display: block;
-      visibility: visible;
-  }
-}
-/* LG */
-@media (min-width: 991px) {
-  /* show 4th item */
-  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
-      display: block;
-  }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
-      transition: none;
-  }
-  /* Show 5th slide on lg if col-lg-3 */
-  .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      position: absolute;
-      top: 0;
-      right: -25%;  /*change this with javascript in the future*/
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-  /* left or forward direction */
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
-  }
-  /* right or prev direction //t - previous slide direction last item animation fix */
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(100%, 0, 0);
-      visibility: visible;
-      display: block;
-      visibility: visible;
-  }
-}
-
-.colorme {
-  color: red;
-}
-
-.navbar .nav > li > a {
-  color:          lightgray;
-  text-shadow:    none;
-  }
