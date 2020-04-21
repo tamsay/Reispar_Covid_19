@@ -648,13 +648,14 @@ border: 1px solid rgb(80, 171, 247);
     font-size: 1.5em;
   }
   .companyProfile{
-    font-size: 1em;
+    font-size: 0.8em;
     text-align: left;
     width: 100%;
     background-color: rgba(1, 1, 1);
     margin: 0px 0px 5px 0px;
     font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
     font-weight: normal;
+    padding-top: 0%;
   }
   #aboutUsDiv{
     margin: 0px 0px 5px 0px;
@@ -663,6 +664,11 @@ border: 1px solid rgb(80, 171, 247);
   .aboutUs{
     font-size: 1.5em;
     font-weight: bold;
+    margin: 0px;
+    padding: 0%;
+  }
+  #aboutUsSection{
+    padding-top: 0px;
   }
 }
 
