@@ -5,7 +5,12 @@
   src: local('./Karla-Bold.ttf'), local('Karla-Bold.woff2'),
        format('ttf'), format('woff'); 
 }
-
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Titillium Web'), url('TitilliumWeb-Regular.woff') format('woff');
+  }
 .navbar-custom {
 }
 /* change the brand and text color */
@@ -124,13 +129,22 @@ li:hover{
     /* background-color:rgb(255, 247, 235); */
     height: 640px;
     width: 100%;
-    margin: 5px 10px;
+    margin: 10px 10px;
     box-sizing: border-box;
     border-radius: 10px; 
 }
 iframe{
   border: 5px solid black;
   border-radius: 10px;
+}
+
+#resultDisplay1{
+  /* background-color: red; */
+}
+#resultDisplay2{
+  height: fit-content;
+  padding-top: 10px;
+  /* background-color: red; */
 }
 @media all and (max-width: 1200px) {
     /* For mobile phones: */
@@ -191,7 +205,7 @@ iframe{
     padding: 0px 10px;
     height: max-content;
     margin: 0px;
-    width: 90%;
+    width: 72%;
 }
 #covidTableSection h1{
   color: white;
@@ -206,6 +220,32 @@ iframe{
   height: 400px;
   /* padding: 5px 50px; */
 }
+/* @media all and (min-width: 1280px) {
+  #covidTableSection{
+    width: 72%;
+  } */
+@media all and (max-width: 1280px) {
+#covidTableSection{
+  width: 90%;
+}
+}
+@media all and (max-width: 960px) {
+  #covidTableSection{
+    width: 92%;
+  }
+}
+@media all and (max-width: 640px) {
+  #covidTableSection{
+    width: 92%;
+  }
+}
+@media all and (min-width: 40px) and (max-width:480px) {
+    #covidTableSection{
+      width: 90%;      
+    }
+}
+
+
 
 #newsFeedSection{
   margin: 10px 0px;
@@ -253,6 +293,9 @@ footer{
   width: 100%;
   padding: 10px 0px;
   margin: 0px 5px 5px 5px;
+  background-color: rgba(1, 1, 20, 0.9);
+  background-color: black;
+
 }
 footer > p{
   padding: 0px;
@@ -337,6 +380,9 @@ footer > p{
     display: none;
     color: white;
     font-weight: bolder;
+    /* background-color: yellow; */
+    /* margin: 0px;
+    padding: 0px; */
   }
   
   .active[data-tab-content] {
@@ -346,34 +392,75 @@ footer > p{
   
   .tabs {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     list-style-type: none;
     margin: 0px;
-    padding: 2px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     border-bottom: 2px solid white;
     font-weight: bolder;
-    font-size: 1em;
+    font-size: 1.5em;
     color: white;
+    /* border: 0px solid blue; */
+    width: 60%;
   }
   
   .tab {
     cursor: pointer;
-    padding: 3px;
-    font-size: 1em;
+    padding: 5px;
+    font-size: 1.5em;
     text-align: center;
+    width: fit-content;
+    margin: 0px 2.5px;
   }
+  @media only screen and (max-width: 1280px) {
+    /* For mobile phones: */
+    .tabs{
+        font-size: 1.0em;
+        justify-content: space-around;
+        width: 90%;
+        padding: 0px;
+    }
+    .tab {
+      padding: 0px 2px;
+      /* font-size: 0.75em; */
+      text-align: center;
+      width: fit-content;
+      margin: 0px 2.5px;
+    }
+  }
+
   @media only screen and (max-width: 640px) {
     /* For mobile phones: */
     .tabs{
-        width: 100%;
-        font-size: 0.75em;
+        width: 90%;
+        font-size: 0.70em;
+        justify-content: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .tab {
+      padding: 0px 2px;
+      /* font-size: 0.75em; */
+      text-align: center;
+      width: fit-content;
+      margin: 0px 2px;
     }
   }
   @media only screen and (max-width: 480px) {
     /* For mobile phones: */
     .tabs{
-        width: 100%;
-        font-size: 0.75em;
+        width: 90%;
+        padding: 0px;
+        margin: 0px;
+        font-size: 0.8em;
+        justify-content: space-around;
+    }
+    .tab {
+      padding: 0px 1px;
+      font-size: 0.8em;
+      text-align: center;
+      width: fit-content;
+      margin: 0px 1px;
     }
   }
   .tab.active {
@@ -390,6 +477,8 @@ footer > p{
   .tab-content {
     margin-left: 0px;
     margin-right: 0px;
+    padding: 0px;
+    margin: 0px;
   }
   
 
@@ -490,8 +579,10 @@ border: 1px solid rgb(80, 171, 247);
   font-size: 1em;
   padding: 10px;
   text-align: left;
-  width: 70%;
-  background-color: rgba(1, 1, 20);
+  width: 90%;
+  background-color: rgba(1, 1, 1);
+  font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
+  font-weight: normal;
 }
 
 #projectContributors{
@@ -528,10 +619,13 @@ border: 1px solid rgb(80, 171, 247);
 .profileName{
   font-size: 2.5em;
   margin: 0px;
+  font-family: "Titillium Web";
+  font-weight: normal;
 }
 .profileDescription{
   font-size: 1em;
   margin: 0px;
+  font-family: "Titillium Web";
 }
 .contactInfo{
 
@@ -554,15 +648,21 @@ border: 1px solid rgb(80, 171, 247);
     font-size: 1.5em;
   }
   .companyProfile{
-    font-size: 0.8em;
-    text-align: justify;
-    width: 85%;
-    background-color: rgba(1, 1, 20);
+    font-size: 0.55em;
+    text-align: left;
+    width: 100%;
+    background-color: rgba(1, 1, 1);
     margin: 0px 0px 5px 0px;
-
+    font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
+    font-weight: normal;
   }
   #aboutUsDiv{
     margin: 0px 0px 5px 0px;
+    padding: 0px;
+  }
+  .aboutUs{
+    font-size: 1.5em;
+    font-weight: bold;
   }
 }
 
