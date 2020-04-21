@@ -395,9 +395,8 @@ footer > p{
 
   #sourcesDiv{
     margin-top: 50px;
-    /* display: flex; */
-    flex-wrap: wrap;
-    
+    display: flex;
+    flex-direction: column;    
   }
 
   #sourcesDiv h2{
@@ -424,18 +423,21 @@ footer > p{
   height: 320px;
   background-color: rgba(1, 1, 20, 0.5);
 }
+
+
 .source:hover{
 border: 1px solid rgb(80, 171, 247);
 }
 .sourceImage{
     width: 50%;
     margin: 0px 0px 5px 0px;
+      
 }
 .sourceHeading{
     font-weight: bold;
     color: white;
     font-weight: bold;
-    margin: 0px;
+    margin-bottom: 5px;
     padding: 0px;
 }
 .source a{
@@ -445,46 +447,73 @@ border: 1px solid rgb(80, 171, 247);
   text-align: center;
   color: white;
 }
+@media all and (max-width:480px){
+  .source{
+    width: 80%;
+    margin: 10px 0px;
+    padding-top: 10px;
+    height: 240px;
+    background-color: rgba(1, 1, 20, 0.5);
+  }
+  .sourceHeading{
+    font-size: 1.25em;
+  }
+  .sourceDescription{
+    font-size: 0.80em;
+  }
+  #sourcesDiv h2{
+    font-size: 2.5em;
+  }
+}
 
 
 .aboutUs{
   color: white;
-  margin-top: 20px;
+  margin: 10px 0px 0px 0px;
 }
-#aboutUsDiv p{
-  font-size: 20px;
-  padding: 0px 25px;
-  text-align: left;
+#aboutUsDiv{
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 25px 0px;
+  padding: 5px 5px;
 }
 #aboutUsSection{
-  color: white;
-  padding: 15px;
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
+  color: white;
+  padding: 10px;
+  margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.companyProfile {
+  font-size: 1em;
+  padding: 10px;
+  text-align: left;
+  width: 70%;
+  background-color: rgba(1, 1, 20);
 }
 
 #projectContributors{
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  
+  width: 90%;
 }
-#projectContributors h3{
-  color: white;
-}
+
 .contributorGroup{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  /* background-color: pink; */
 }
+
 .profile{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 0);
   width: 350px;
   margin: 10px;
   padding: 10px;
@@ -494,16 +523,47 @@ border: 1px solid rgb(80, 171, 247);
 }
 .profileImage{
   width: 50%;
-  margin: 0px 0px 5px 0px;
-  
+  margin: 0px 0px 5px 0px; 
 }
 .profileName{
-
+  font-size: 2.5em;
+  margin: 0px;
 }
 .profileDescription{
   font-size: 1em;
+  margin: 0px;
 }
 .contactInfo{
 
 }
+@media all and (max-width:480px){
+  .profile{
+    width: 80%;
+    margin: 10px 0px;
+    padding-top: 10px;
+    height: 320px;
+    background-color: rgba(1, 1, 20, 0.9);
+  }
+  .profileHeading{
+    font-size: 1.25em;
+  }
+  .profileDescription{
+    font-size: 0.80em;
+  }
+  .contributorHeader{
+    font-size: 1.5em;
+  }
+  .companyProfile{
+    font-size: 0.8em;
+    text-align: justify;
+    width: 85%;
+    background-color: rgba(1, 1, 20);
+    margin: 0px 0px 5px 0px;
+
+  }
+  #aboutUsDiv{
+    margin: 0px 0px 5px 0px;
+  }
+}
+
            
