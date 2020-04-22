@@ -99,7 +99,7 @@ const recievedNews = (newsdata) => {
         return response.json();
     })
     .then(function (data) {
-       // recievedNews(data)
+       recievedNews(data)
     });
 
 const createTable=(tableData)=>{
@@ -115,7 +115,7 @@ const createTable=(tableData)=>{
       layout:"fitDataStretch",
   
       columns:[
-        {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:false},
+        {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:true},
         {title:"Total Cases", field:"Total_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
         {title:"Total Deaths", field:"Total_Deaths", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
         {title:"Total Recovered", field:"Total_Recovered", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
@@ -145,4 +145,31 @@ fetch("https://reisparcovid19.herokuapp.com?continent=world", requestOptions)
   createTable(result);
   }) 
   .catch(error => console.log('error', error));
-  
+
+
+
+/*
+    Carousel
+*/
+$('#carousel-example').on('slide.bs.carousel', function (e) {
+  /*
+      CC 2.0 License Iatek LLC 2018 - Attribution required
+  */
+  var $e = $(e.relatedTarget);
+  var idx = $e.index();
+  var itemsPerSlide = 5;
+  var totalItems = $('.carousel-item').length;
+
+  if (idx >= totalItems-(itemsPerSlide-1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i=0; i<it; i++) {
+          // append slides to end
+          if (e.direction=="left") {
+              $('.carousel-item').eq(i).appendTo('.carousel-inner');
+          }
+          else {
+              $('.carousel-item').eq(0).appendTo('.carousel-inner');
+          }
+      }
+  }
+});
