@@ -540,7 +540,7 @@ footer > p{
   padding: 10px;
   border-radius: 10px;
   height: 320px;
-  background-color: rgba(1, 1, 20, 0.5);
+  background-color: rgba(1, 1, 20, 0.99);
 }
 
 
@@ -635,38 +635,44 @@ border: 1px solid rgb(80, 171, 247);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 350px;
+  width: 400px;
   margin: 10px;
-  padding: 10px;
+  padding: 0px;
   border-radius: 10px;
-  height: 350px;
+  height: 400px;
   background-color: rgba(1, 1, 20);
 }
 .profileImage{
-  width: 50%;
-  margin: 0px 0px 5px 0px; 
+  width: 70%;
+  height: 70%;
+  margin: 0px 0px 0px 0px; 
+  padding: 0%;
+  /* background-color: red; */
 }
 .profileName{
-  font-size: 2.2em;
+  font-size: 2.em;
   margin: 0px;
+  padding: 0%;
   font-family: "Titillium Web";
   font-weight: normal;
 }
 .profileDescription{
   font-size: 1em;
   margin: 0px;
+  padding: 0%;
   font-family: "Titillium Web";
 }
-.contactInfo{
 
-}
 @media all and (max-width:480px){
   .profile{
     width: 80%;
     margin: 10px 0px;
     padding-top: 10px;
-    height: 320px;
-    background-color: rgba(1, 1, 20, 0.9);
+    height: max-content;
+    background-color: rgba(1, 1, 20, 0.95);
+  }
+  .profileImage{
+    width: 100%;
   }
   .profileHeading{
     font-size: 1.25em;
