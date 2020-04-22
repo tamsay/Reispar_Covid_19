@@ -298,8 +298,8 @@ footer{
   align-items: center;
   font-weight: bolder;
   width: 100%;
-  padding: 10px 0px;
-  margin: 0px 5px 5px 5px;
+  padding: 0px 0px;
+  margin: 5px 0px 0px 0px;
   background-color: rgba(1, 1, 20, 0.9);
   background-color: black;
 
@@ -330,13 +330,36 @@ footer > p{
   margin: 0px;
   padding: 0px;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 #contactDetails .icon{
   width: 1.5em;
   height: 1.5em;
   margin: 0px 5px 0px 0px;
 }
+@media all and (max-width: 997px) {
+  /* For mobile phones: */
+  .icon{
+    width: 1.5em;
+    height: 1.5em;
+    margin: 5px;
+    color: white;
+    background-color: white;
+  }
+  
+  #contactDetails p{
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  #contactDetails .icon{
+    width: 1em;
+    height: 1em;
+    margin: 0px 2.5px 0px 0px;
+  } 
+}
+
 @media all and (max-width: 640px) {
   /* For mobile phones: */
   .icon{
