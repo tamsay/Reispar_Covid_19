@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" language="javascript" src="https://rawgit.com/Microsoft/PowerBI-JavaScript/master/dist/powerbi.min.js"></script>
+
+
     <title>Reispar Covid-19 Live Analytics</title>
 </head>
 
@@ -94,6 +98,9 @@
                 <iframe width="1080" height="720" src="https://app.powerbi.com/view?r=eyJrIjoiMDViMmE2ZWEtMWYxMC00NzhhLWIwZTAtOWRjNWY2NmJhMzZiIiwidCI6ImFiZjIwNTg3LWM0Y2MtNGUyZC1iYThhLTViY2M1NWVkMmRkYyJ9" frameborder="0" allowFullScreen="true"></iframe>
               </div> -->
 
+              <!-- <h1>Power BI Embedded Demo</h1>
+              <div id="reportContainer" style="width: 80%; height: 600px;"></div> -->
+
     </section>
   
     <section id="covidTableSection">
@@ -145,6 +152,40 @@
 
     </footer>
 
+
+    <!-- <script>
+      $(document).ready(function () {
+          var getEmbedToken = "https://app.powerbi.com/view?r=eyJrIjoiYTI0YzYzNjQtOGQyMy00ZjQ3LWFhYmEtMTZjNTI0NGYwZmEyIiwidCI6ImFiZjIwNTg3LWM0Y2MtNGUyZC1iYThhLTViY2M1NWVkMmRkYyJ9";
+  
+          $.ajax({
+              url: getEmbedToken,
+              jsonpCallback: 'callback',
+              contentType: 'application/javascript',
+              dataType: "jsonp",
+              success: function (json) {
+  
+                  var models = window['powerbi-client'].models;
+  
+                  var embedConfiguration = {
+                      type: 'report',
+                      id: json.ReportId,
+                      embedUrl: json.EmbedUrl,
+                      tokenType: models.TokenType.Embed,
+                      accessToken: json.EmbedToken
+                  };
+  
+                  var $reportContainer = $('#reportContainer');
+                  var report = powerbi.embed($reportContainer.get(0), embedConfiguration);
+  
+  
+              },
+              error: function () {
+                  alert("Error");
+              }
+          });
+  
+      });
+  </script> -->
 
     <script src="jquery-3.4.1.js"></script>
     <script src="jquery-3.4.1.min.js"></script>

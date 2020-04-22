@@ -117,10 +117,16 @@ const createTable=(tableData)=>{
       columns:[
         {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:true},
         {title:"Total Cases", field:"Total_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"New Cases", field:"New_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
         {title:"Total Deaths", field:"Total_Deaths", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"New Deaths", field:"New_Deaths", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
         {title:"Total Recovered", field:"Total_Recovered", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
         {title:"Active Cases", field:"Active_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
         {title:"Serious/Critical", field:"Serious/Critical", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Total Cases/Million", field:"Tot_Cases", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Deaths", field:"Deaths", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Total Tests", field:"Total_Tests", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
+        {title:"Tests/Million", field:"Tests", align:"center", sorter: 'number', editor:false, formatter:"money", formatterParams:{thousand:",", precision:false}},
         {title:"Continents", field:"Continents", align:"center", sorter: 'string', editor:false},
       ],
     });
