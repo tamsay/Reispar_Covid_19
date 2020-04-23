@@ -726,10 +726,17 @@ border: 1px solid rgb(80, 171, 247);
   font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
   font-weight: normal;
   color: white;
+  /* background-color: yellow; */
 }
 .staySafe h2{
   font-size: 2em;
   text-align: center;
+}
+.staySafe li{
+  list-style-type: none;
+  list-style-image: url("./bluetick2.png");
+  color: white;
+  /* background-color: red; */
 }
 
 @media all and (max-width:480px){
