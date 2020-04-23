@@ -301,7 +301,6 @@ footer{
   padding: 0px 0px;
   margin: 5px 0px 0px 0px;
   background-color: rgba(1, 1, 20, 0.9);
-  background-color: black;
 
 }
 footer > p{
@@ -713,6 +712,45 @@ border: 1px solid rgb(80, 171, 247);
   /* flex-direction: column; */
   background-color: red;
   color: white;
+}
+
+#staySafeDiv{
+  font-family: 'Titillium Web';
+}
+.staySafe{
+  font-size: 1.2em;
+  padding: 20px 10px;
+  text-align: left;
+  width: 90%;
+  background-color: rgba(1, 1, 1);
+  font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
+  font-weight: normal;
+  color: white;
+}
+.staySafe h2{
+  font-size: 2em;
+  text-align: center;
+}
+
+@media all and (max-width:480px){
+  .staySafe{
+    font-size: 0.85em;
+    text-align: left;
+    width: 100%;
+    background-color: rgba(1, 1, 1);
+    font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
+    font-weight: normal;
+    padding: 1em 1.5em;
+    /* background-color: greenyellow; */
+  }
+  .staySafe ul{
+    /* background-color: red; */
+    padding: 0em 0.5em;
+    margin: 0px;
+  }
+  .staySafe h2{
+    font-size: 1.4em;
+  }
 }
 
 
