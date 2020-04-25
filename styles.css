@@ -718,12 +718,12 @@ border: 1px solid rgb(80, 171, 247);
     font-size: 1.5em;
   }
   .companyProfile{
-    font-size: 1em;
+    font-size: 1.08em;
     text-align: left;
     width: 100%;
     background-color: rgba(1, 1, 1);
     margin: 0px 0px 5px 0px;
-    font-family: 'PT Serif Regular', "Muli Regular", "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
+    font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
     font-weight: normal;
     padding-top: 0%;
   }
@@ -772,12 +772,12 @@ border: 1px solid rgb(80, 171, 247);
 @media all and (max-width:480px){
   .staySafe{
     padding: 20px 20px;
-    font-size: 0.85em;
+    font-size: 1em;
     text-align: left;
     width: 100%;
     background-color: rgba(1, 1, 1);
     font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
-    font-weight: normal;
+    font-weight: lighter;
     /* background-color: greenyellow; */
   }
   .staySafe ul{
@@ -786,7 +786,7 @@ border: 1px solid rgb(80, 171, 247);
     margin: 0px;
   }
   .staySafe h2{
-    font-size: 1.4em;
+    font-size: 1.25em;
   }
 }
 
