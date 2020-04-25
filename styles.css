@@ -11,6 +11,19 @@
   font-weight: normal;
   src: local('Titillium Web'), url('TitilliumWeb-Regular.woff') format('woff');
   }
+@font-face {
+  font-family: 'Muli Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Muli Regular'), url('Muli-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'PT Serif Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PT Serif Regular'), url('PT_Serif-Web-Regular.woff') format('woff');
+}
+      
 .navbar-custom {
 }
 /* change the brand and text color */
@@ -301,12 +314,12 @@ footer{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-weight: bolder;
+  font-weight: bold;
   width: 100%;
   padding: 0px 0px;
   margin: 5px 0px 0px 0px;
   background-color: rgba(1, 1, 20, 0.9);
-
+  font-family: 'PT Serif Regular', "Muli Regular", "Titillium Web";
 }
 footer > p{
   padding: 0px;
@@ -333,8 +346,9 @@ footer > p{
 #contactDetails p{
   margin: 0px;
   padding: 0px;
-  font-weight: bold;
-  font-size: 1.5em;
+  font-weight: lighter;
+  font-size: 1.2em;
+  font-family: 'Arial', 'PT Serif Regular', 'Muli Regular';
 }
 #contactDetails .icon{
   width: 1.5em;
@@ -354,7 +368,7 @@ footer > p{
   #contactDetails p{
     margin: 0px;
     padding: 0px;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 1.2em;
   }
   #contactDetails .icon{
@@ -377,7 +391,7 @@ footer > p{
   #contactDetails p{
     margin: 0px;
     padding: 0px;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 0.75em;
   }
   #contactDetails .icon{
@@ -399,8 +413,9 @@ footer > p{
   #contactDetails p{
     margin: 0px;
     padding: 0px;
-    font-weight: bold;
-    font-size: 0.75em;
+    font-weight: normal;
+    font-size: 0.7em;
+    /* font-family: 'PT Serif Regular'; */
   }
   #contactDetails .icon{
     width: 1em;
@@ -527,13 +542,14 @@ footer > p{
   
 
   #sourcesDiv{
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 75px;
     display: flex;
     flex-direction: column;    
   }
 
   #sourcesDiv h2{
-    font-size: 5em;
+    font-size: 4em;
     color: white;
   }
       
@@ -579,6 +595,7 @@ border: 1px solid rgb(80, 171, 247);
 .sourceDescription{
   text-align: center;
   color: white;
+  font-family: "Titillium Web";
 }
 @media all and (max-width:480px){
   .source{
@@ -595,7 +612,7 @@ border: 1px solid rgb(80, 171, 247);
     font-size: 0.80em;
   }
   #sourcesDiv h2{
-    font-size: 2.5em;
+    font-size: 2.0em;
   }
 }
 
@@ -625,7 +642,7 @@ border: 1px solid rgb(80, 171, 247);
   text-align: left;
   width: 90%;
   background-color: rgba(1, 1, 1);
-  font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
+  font-family: 'PT Serif Regular', "Muli Regular", "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
   font-weight: normal;
 }
 
@@ -674,7 +691,8 @@ border: 1px solid rgb(80, 171, 247);
   font-size: 1em;
   margin: 0px;
   padding: 0%;
-  font-family: "Titillium Web";
+  font-family: 'Arial', "Titillium Web", "PT Serif Regular", "Muli Regular", ;
+  font-weight: lighter;
 }
 
 
@@ -694,17 +712,18 @@ border: 1px solid rgb(80, 171, 247);
   }
   .profileDescription{
     font-size: 0.80em;
+    font-family: "Titillium Web";
   }
   .contributorHeader{
     font-size: 1.5em;
   }
   .companyProfile{
-    font-size: 0.85em;
+    font-size: 1em;
     text-align: left;
     width: 100%;
     background-color: rgba(1, 1, 1);
     margin: 0px 0px 5px 0px;
-    font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
+    font-family: 'PT Serif Regular', "Muli Regular", "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
     font-weight: normal;
     padding-top: 0%;
   }
