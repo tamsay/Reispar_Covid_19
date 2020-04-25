@@ -201,10 +201,9 @@ iframe{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0px;
+    margin-top: 3.5em;
     padding: 0px 10px;
     height: max-content;
-    margin: 0px;
     width: 72%;
 }
 #covidTableSection h1{
@@ -242,6 +241,12 @@ iframe{
 @media all and (min-width: 40px) and (max-width:480px) {
     #covidTableSection{
       width: 90%;      
+    }
+    #covidTableSection h1{
+      color: white;
+      font-weight: bolder;
+      margin: 0px;
+      font-size: 1.5em;
     }
 }
 
@@ -427,7 +432,7 @@ footer > p{
     padding: 0px 0px 0px 0px;
     border-bottom: 2px solid white;
     font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: white;
     /* border: 0px solid blue; */
     width: 60%;
@@ -441,6 +446,16 @@ footer > p{
     width: fit-content;
     margin: 0px 2.5px;
   }
+  @media only screen and (min-width: 1280px) {
+    /* For mobile phones: */
+    .tabs{
+        /* font-size: 1.25em; */
+        justify-content: space-around;
+        width: 90%;
+        padding: 0px;
+    }
+  }
+
   @media only screen and (max-width: 1280px) {
     /* For mobile phones: */
     .tabs{
