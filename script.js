@@ -113,6 +113,12 @@ const createTable=(tableData)=>{
       placeholder: 'Data Loading',
       // layout:"fitColumns",
       layout:"fitDataStretch",
+
+      rowFormatter:function(row){
+        if(row.getData().col == "blue"){
+            row.getElement().style.backgroundColor = "#A6A6DF";
+        }
+    },
   
       columns:[
         {title:"Country", field:"Country", sorter: 'string', editor:"false", frozen:true},

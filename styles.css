@@ -347,7 +347,7 @@ footer > p{
   margin: 0px;
   padding: 0px;
   font-weight: lighter;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-family: 'Arial', 'PT Serif Regular', 'Muli Regular';
 }
 #contactDetails .icon{
@@ -369,7 +369,7 @@ footer > p{
     margin: 0px;
     padding: 0px;
     font-weight: lighter;
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
   #contactDetails .icon{
     width: 1em;
@@ -392,7 +392,7 @@ footer > p{
     margin: 0px;
     padding: 0px;
     font-weight: lighter;
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   #contactDetails .icon{
     width: 1em;
@@ -414,7 +414,7 @@ footer > p{
     margin: 0px;
     padding: 0px;
     font-weight: normal;
-    font-size: 0.7em;
+    font-size: 1em;
     /* font-family: 'PT Serif Regular'; */
   }
   #contactDetails .icon{
@@ -475,6 +475,22 @@ footer > p{
     /* For mobile phones: */
     .tabs{
         font-size: 1.0em;
+        justify-content: space-around;
+        width: 90%;
+        padding: 0px;
+    }
+    .tab {
+      padding: 0px 2px;
+      /* font-size: 0.75em; */
+      text-align: center;
+      width: fit-content;
+      margin: 0px 2.5px;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    /* For mobile phones: */
+    .tabs{
+        font-size: 0.9em;
         justify-content: space-around;
         width: 90%;
         padding: 0px;
@@ -549,7 +565,7 @@ footer > p{
   }
 
   #sourcesDiv h2{
-    font-size: 4em;
+    font-size: 3em;
     color: white;
   }
       
@@ -576,6 +592,8 @@ footer > p{
 
 .source:hover{
 border: 1px solid rgb(80, 171, 247);
+padding: 5px;
+margin: 10px;
 }
 .sourceImage{
     width: 50%;
@@ -588,6 +606,10 @@ border: 1px solid rgb(80, 171, 247);
     font-weight: bold;
     margin-bottom: 5px;
     padding: 0px;
+    font-size: 2em;
+    font-family: 'Arial', 'Titillium Web';
+    border-bottom: 1px solid white;
+
 }
 .source a{
   text-decoration: none;
@@ -595,21 +617,23 @@ border: 1px solid rgb(80, 171, 247);
 .sourceDescription{
   text-align: center;
   color: white;
-  font-family: "Titillium Web";
+  font-family: "Helvetica", "Titillium Web";
+  font-size: 1.2em;
 }
 @media all and (max-width:480px){
   .source{
     width: 80%;
     margin: 10px 0px;
     padding-top: 10px;
-    height: 240px;
+    height: 280px;
     background-color: rgba(1, 1, 20, 0.5);
   }
   .sourceHeading{
     font-size: 1.25em;
+    border-bottom: 1px solid white;
   }
   .sourceDescription{
-    font-size: 0.80em;
+    font-size: 1.1em;
   }
   #sourcesDiv h2{
     font-size: 2.0em;
@@ -719,7 +743,7 @@ border: 1px solid rgb(80, 171, 247);
   }
   .companyProfile{
     font-size: 1.08em;
-    text-align: left;
+    text-align: justify;
     width: 100%;
     background-color: rgba(1, 1, 1);
     margin: 0px 0px 5px 0px;
