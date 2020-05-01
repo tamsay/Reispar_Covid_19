@@ -7,9 +7,13 @@
     
     <link rel="stylesheet" media="screen" href="particles/style.css">
     <link href="tabulator.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="bootstrap.min.css">
+
     <link rel="stylesheet" href="styles.css">
-    <script src="https://use.fontawesome.com/84fe0d4adf.js"></script>
+
+  
+    <!-- <script src="https://use.fontawesome.com/84fe0d4adf.js"></script> -->
 
 
     <title>Reispar Covid-19 Live Analytics - Stay Safe</title>
@@ -19,7 +23,7 @@
     <header>
       
         <div id="logo">
-          <img src="reisparlogo.png">
+          <img src="./images/reisparlogo.png">
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light justify-content-end navbar-custom">
@@ -51,92 +55,117 @@
 
     <div id="particles-js" href="#home"></div>
 
-    <section id="slider">
-     <!-- Top content -->
-<div class="top-content">
-  <div class="container-fluid">
-      <div id="carousel-example" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner row w-100 mx-auto" role="listbox">
-              
-              
-          </div>
-          <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-          </a>
-      </div>
-  </div>
-</div>
-    </section>
-
+    
     <section id="staySafeDiv" class="staySafe">
-      <div>
-      
-        <p>Confirmed cases of Covid19 reached about 2.5 million globally in April 2020, staying safe cannot be over emphasised upon.
+    
+        <p id="staySafeIntro">Confirmed cases of Covid19 reached about 2.5 million globally in April 2020, staying safe cannot be over emphasized upon.
           Businesses across the globe have had to cope with the loss of revenue as well as disrupted market and supply chain services.</p><br>
-      </div>
-
-      <div>
+     
+      
         <h2>Let's Join Hands Together to SLOW THE SPREAD OF THE CORONAVIRUS!</h2>
-        <p>
-          Kindly follow these guidelines as backed by the World Health Organization:</p>
-          <ul>
-            <li>Stay home if you can and avoid any non-essential travel. Avoid social gatherings of more than 10 people pending when your government or local health authority state otherwise.</li><br>
+        <h3>
+          Kindly follow these guidelines as backed by the World Health Organization:</h3>
+          <!-- <ul>
+            <li>Stay at home if you can and avoid any non-essential travel. Avoid social gatherings of more than 10 people pending when your government or local health authority state otherwise.</li><br>
             <li>Yes, Practice social distancing by keeping at least 2 meters; about two arm lengths — away from others if you must go out in public.</li><br>
             <li>Avoid close contact with people who are sick. Virtual communication is massively encouraged.</li><br>
             <li>Wash your hands often with soap and water for at least 20 seconds, most especially after being in a public place, or after blowing your nose, coughing or sneezing. If soap and water are not readily available, use a hand sanitizer with at least 60% alcohol.</li><br>
             <li>Avoid touching your eyes, nose and mouth with unwashed hands.</li><br>
             <li>Clean and disinfect household surfaces daily, regularly used devices and surfaces frequently throughout the day.</li><br>
             <li>Cover your coughs and sneezes. Use a tissue to cover your nose and mouth and throw used tissues in a lined waste can. If a tissue isn't available, cough or sneeze into your elbow — not your hands. Wash your hands immediately.</li><br>
-          </ul>      
-      </div>
+          </ul>       -->
     </section>
 
+    <div id="carouselExampleIndicators" class="carousel carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        <!-- <li data-target="#carouselExampleIndicators" data-slide-to="7"></li> -->
 
-    <!-- <section id="newsFeedSection">
-          <div class="top-content">
-            <div class="container-fluid">
-                <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                    <div id="newsFeed" class="carousel-inner row w-100 mx-auto" role="listbox">
-                    </div>
-                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
+      </ol>
+      <div class="carousel-inner" id="innerCarouselStaySafe">
+        <div class="carousel-item active">
+          <div class="safeTip">
+            <img class="" src="./images/stayathome.png" alt="First slide">
+            <p>Stay at home if you can and avoid any non-essential travel. Avoid social gatherings of more than 10 people pending when your government or local health authority state otherwise.</p>
           </div>
-    </section> -->
-
+        </div>
+        <div class="carousel-item">
+          <div class="safeTip">
+            <img class="" id="test" src="./images/socialdistance.jpeg" alt="Second slide">
+            <p>Yes, Practice social distancing by keeping at least 2 meters; about two arm lengths — away from others if you must go out in public.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="safeTip">
+            <img class="" src="./images/virtualcomm.png" alt="Third slide">
+            <p>Avoid close contact with people who are sick. Virtual communication is massively encouraged.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="safeTip">
+            <img class="" src="./images/washhands.jpeg" alt="Fourth slide">
+            <p>Wash your hands often with soap and water for at least 20 seconds, most especially after being in a public place, or after blowing your nose, coughing or sneezing. If soap and water are not readily available, use a hand sanitizer with at least 60% alcohol.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="safeTip">
+            <img class="" src="./images/mouthandnose.png" alt="Fifth slide">
+            <p>Avoid touching your eyes, nose and mouth with unwashed hands.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="safeTip">
+            <img class="" src="./images/disinfect.jpeg" alt="Sixth slide">
+            <p>Clean and disinfect household surfaces daily, regularly used devices and surfaces frequently throughout the day.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="safeTip">
+            <img class="" src="./images/elbow sneeze.webp" alt="Seventh slide">
+            <p>Cover your coughs and sneezes. Use a tissue to cover your nose and mouth and throw used tissues in a lined waste can. If a tissue isn't available, cough or sneeze into your elbow — not your hands. Wash your hands immediately.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+   
     <footer>
 
       <div id="contactDetails">
         <p>Contact Us</p>
-        <p><span><img class = 'icon' src="envelope-square.svg" alt="email"></span> academy@reispartechnologies.com.ng</p>
-        <p><span><img class = 'icon' src="phone-square-alt.svg" alt="phone"></span>+2349038932506</p>
+        <p><span><img class = 'icon' src="./images/envelope-square.svg" alt="email"></span> academy@reispartechnologies.com.ng</p>
+        <p><span><img class = 'icon' src="./images/phone-square-alt.svg" alt="phone"></span>+2349038932506</p>
       </div>
       
       <div id="socialMedia">
-        <a href="http://www.twitter.com/reispart" target="_blank"><img class = 'icon' src="twitter.svg" alt="twitter"></a>
-        <a href="http://www.facebook.com/reispartechnologies" target="_blank"><img class = 'icon' src="facebook.svg" alt="facebook"></a>
-        <a href="http://www.instagram.com/reispartechnologies" target="_blank"><img class = 'icon' src="instagram.svg" alt="instagram"></a>
-        <a href="http://www.linkedin.com/company/reispar-technologies" target="_blank"><img class = 'icon' src="linkedin.svg" alt="linkedin"></a>
+        <a href="http://www.twitter.com/reispart" target="_blank"><img class = 'icon' src="./images/twitter.svg" alt="twitter"></a>
+        <a href="http://www.facebook.com/reispartechnologies" target="_blank"><img class = 'icon' src="./images/facebook.svg" alt="facebook"></a>
+        <a href="http://www.instagram.com/reispartechnologies" target="_blank"><img class = 'icon' src="./images/instagram.svg" alt="instagram"></a>
+        <a href="http://www.linkedin.com/company/reispar-technologies" target="_blank"><img class = 'icon' src="./images/linkedin.svg" alt="linkedin"></a>
       </div>
 
-      <a href="#logo" ><img class = 'icon' src="arrow-up.svg" alt="move to top"></a>
+      <a href="#logo" ><img class = 'icon' src="./images/arrow-up.svg" alt="move to top"></a>
 
     </footer>
     
     <script src="jquery-3.4.1.js"></script>
     <script src="jquery-3.4.1.min.js"></script>
+
+   
+
     <script src="bootstrap.min.js"></script>
     <script src="particles/particles.js"></script>
     <script src="particles/app.js"></script>

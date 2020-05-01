@@ -20,6 +20,7 @@ const recievedNews = (newsdata) => {
     const articlesDiv = document.querySelector("#newsFeed")
 
     let  createArticle=(article, activeClass)=>{	
+      const wrapperDiv = document.createElement('div')
       const div = document.createElement("div");
       const title = document.createElement('h2');
       const image = document.createElement('img')
@@ -47,6 +48,7 @@ const recievedNews = (newsdata) => {
       div.appendChild(urlParagraph);
       div.appendChild(imageLink);
       articlesDiv.appendChild(div)
+      
     };
 
     for(let x=0; x <= newsdata.articles.length; x++){
@@ -62,7 +64,8 @@ const recievedNews = (newsdata) => {
       }
       else {
         let name = "news carousel-item col-12 col-sm-6 col-md-4 col-lg-3"
-        // createArticle(article,name)
+      
+        const wrapperDiv = document.createElement('div')
         const div = document.createElement("div");
         const title = document.createElement('h2');
         const image = document.createElement('img')
@@ -105,8 +108,7 @@ const recievedNews = (newsdata) => {
 const createTable=(tableData)=>{
   
     $("#countryStatistics").tabulator({
-      // responsiveLayout:true,
-      // responsiveLayout:"hide",
+      
       autoResize: true,
       height: 400,
       virtualDomBuffer:300,
@@ -159,29 +161,6 @@ fetch("https://reisparcovid19.herokuapp.com?continent=world", requestOptions)
   .catch(error => console.log('error', error));
 
 
-
-/*
-    Carousel
-*/
-$('#carousel-example').on('slide.bs.carousel', function (e) {
-  /*
-      CC 2.0 License Iatek LLC 2018 - Attribution required
-  */
-  var $e = $(e.relatedTarget);
-  var idx = $e.index();
-  var itemsPerSlide = 5;
-  var totalItems = $('.carousel-item').length;
-
-  if (idx >= totalItems-(itemsPerSlide-1)) {
-      var it = itemsPerSlide - (totalItems - idx);
-      for (var i=0; i<it; i++) {
-          // append slides to end
-          if (e.direction=="left") {
-              $('.carousel-item').eq(i).appendTo('.carousel-inner');
-          }
-          else {
-              $('.carousel-item').eq(0).appendTo('.carousel-inner');
-          }
-      }
-  }
-});
+  $('#carouselExampleIndicators').carousel({
+    interval :5000
+  })

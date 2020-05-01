@@ -269,46 +269,57 @@ iframe{
   /* background-color: red; */
   margin: 10px 0px;
   width: 100%;
+  padding: 0%;
 }
-#newsFeed{
+ #newsFeed{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* height: 25vh; */
     margin: 0px;
     padding: 2.5px;
-}
+    /* width: 80%; */
+    /* background-color: blue; */
+} 
 .news {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin: 7.5px 10px;
-    padding: 0px;
-    height: 100%;
-    /* border: 1px solid white; */
+    /* display: flex;
+    flex-direction: column; */
+    /* width: 100%; */
+    margin: 2px 0px;
+    padding: 5px 10px;
+    /* height: 100%; */
+    border: 1px solid rgb(10, 18, 34);
     text-align: center;
+    border-radius: 10px;
+    background-color: black;
 } 
 
 .news h2{
-    font-size: 12px;
+    font-size: 1.2em; 
     color: white;
-  font-weight: bold;
+    margin: 0%;
+    font-weight: bold;
 }
 .news p{
-  font-size: 10px;
-  
+  font-size: 1em; 
+  margin: 5px;
 }
 .imageLink {
-  width: 50%;
+  width: 60%;
   /* max-height: 50%; */
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
+.active{
+  /* width: 50%; */
+} 
+
 @media all and (max-width: 480px){
   .imageLink{
     width: 50%
   }
 }
+
 
 footer{
   display: flex;
@@ -414,7 +425,7 @@ footer > p{
     margin: 0px;
     padding: 0px;
     font-weight: normal;
-    font-size: 0.9em;
+    font-size: 0.8em;
     /* font-family: 'PT Serif Regular'; */
   }
   #contactDetails .icon{
@@ -769,181 +780,172 @@ margin: 10px;
 
 #staySafeDiv{
   font-family: 'Titillium Web';
+  margin: 0px;
+  padding-top: 1.5em ;
+  padding-bottom: 0em;
+  margin-bottom: 1em;
 }
 .staySafe{
   font-size: 1.2em;
-  padding: 5em 1em;
   text-align: left;
   width: 90%;
+  color: white;
   background-color: rgba(1, 1, 1);
   font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
-  font-weight: normal;
-  color: white;
-  /* background-color: yellow; */
+  font-weight: lighter;
+}
+#staySafeIntro{
+  font-size: 1.2em;
+}
+.staySafe p{
+  font-size: 1.35em;
 }
 .staySafe h2{
-  font-size: 2em;
+  font-size: 1.3em;
   text-align: center;
 }
-.staySafe li{
-  list-style-type: none;
-  list-style-image: url("./bluetick2.png");
+.staySafe h3{
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.safeTip{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-bottom: 1.5em;
+  padding-top: 1em;
+  padding-left: 0.5em;
+
+  background-color: rgb(7, 7, 15); 
+  border-radius: 10px;
+  /* border: 1px solid white; */
+  align-items: center;
+  margin: 0 auto;
+}
+
+.safeTip img{
+  width: 100%;
+  height: auto;
+  /* border-top-left-radius: 10px; */
+}
+.safeTip p{
+  font-size: 2em;
+  line-height: 1.3em;
   color: white;
-  /* background-color: red; */
-  line-height: 1.25em;
+  font-family: 'Arial';
+  font-weight: normal;
+  padding: 0.5em 0.25em 0em 0.25em;
+  margin: 0%;
 }
-
-@media all and (max-width:480px){
-  .staySafe{
-    padding: 20px 20px;
-    font-size: 1em;
-    text-align: left;
+  
+@media all and (min-width:760px) and (max-width:1280px){
+  .safeTip{
+    grid-template-columns: 40% 60%;
+  }
+  .safeTip img{
     width: 100%;
-    background-color: rgba(1, 1, 1);
-    font-family: "Titillium Web", "Helvetica Neue",Arial,"Noto Sans","Karla", sans-serif;
-    font-weight: lighter;
-    /* background-color: greenyellow; */
+    height: auto;
   }
-  .staySafe ul{
+  .safeTip p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+}
+  @media all and (min-width:640px) and (max-width:760px){
+    .safeTip{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+    }
+    
+    .safeTip img{
+      width: 80%;
+    }
+    .safeTip p{
+      font-size: 1.5em;
+      line-height: 1.25em;
+    }
+  }
+  @media all and (min-width:480px) and (max-width:640px){
+    .safeTip{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+    }
+    
+    .safeTip img{
+      width: 80%;
+    }
+    .safeTip p{
+      font-size: 1.5em;
+      line-height: 1.25em;
+    }
+  }
+  
+  @media all and (max-width:480px){
+    #staySafeIntro{
+      font-size: 1.25em;
+      line-height: 1.25em;
+    }
+     .safeTip{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+    }
+    
+    .safeTip img{
+      width: 80%;
+    }
+    .safeTip p{
+      font-size: 1.3em;
+      line-height: 1.25em;
+    }
+    .staySafe h2{
+      font-size: 1.2em;
+      text-align: center;
+    }
+    .staySafe h3{
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 0.1em;
+    }
+  }
+
+
+  #innerCarouselStaySafe{
+    width: 82.5%;
+    margin: 0 auto;
+    padding: 0%;
     /* background-color: red; */
-    padding: 0em 0.5em;
-    margin: 0px;
   }
-  .staySafe h2{
-    font-size: 1.25em;
+  #carouselExampleIndicators{
+    width: 90%;
+    /* background-color: red; */
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 1em;
   }
+  .carousel-indicators {
+    margin-bottom: 2.5px;
+    margin-top: 0px;
+    padding: 0%;
+  }
+
+
+  
+  @media (max-width: 992px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
 }
 
 
 
-/*
-    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
-    code customized by Azmind.com
-*/
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Show 4th slide on md if col-md-4*/
-  .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      position: absolute;
-      top: 0;
-      right: -33.3333%;  /*change this with javascript in the future*/
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  /* Show 3rd slide on sm if col-sm-6*/
-  .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
-      position: absolute;
-      top: 0;
-      right: -50%;  /*change this with javascript in the future*/
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-}
-@media (min-width: 576px) {
-  .carousel-item {
-      margin-right: 0;
-  }
-  /* show 2 items */
-  .carousel-inner .active + .carousel-item {
-      display: block;
-  }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
-      transition: none;
-  }
-  .carousel-inner .carousel-item-next {
-      position: relative;
-      transform: translate3d(0, 0, 0);
-  }
-  /* left or forward direction */
-  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-  .carousel-item-next.carousel-item-left + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
-  }
-  /* farthest right hidden item must be also positioned for animations */
-  .carousel-inner .carousel-item-prev.carousel-item-right {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-  /* right or prev direction */
-  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-  .carousel-item-prev.carousel-item-right + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(100%, 0, 0);
-      visibility: visible;
-      display: block;
-      visibility: visible;
-  }
-}
-/* MD */
-@media (min-width: 768px) {
-  /* show 3rd of 3 item slide */
-  .carousel-inner .active + .carousel-item + .carousel-item {
-      display: block;
-  }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-      transition: none;
-  }
-  .carousel-inner .carousel-item-next {
-      position: relative;
-      transform: translate3d(0, 0, 0);
-  }
-  /* left or forward direction */
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
-  }
-  /* right or prev direction */
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(100%, 0, 0);
-      visibility: visible;
-      display: block;
-      visibility: visible;
-  }
-}
-/* LG */
-@media (min-width: 991px) {
-  /* show 4th item */
-  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
-      display: block;
-  }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
-      transition: none;
-  }
-  /* Show 5th slide on lg if col-lg-3 */
-  .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      position: absolute;
-      top: 0;
-      right: -25%;  /*change this with javascript in the future*/
-      z-index: -1;
-      display: block;
-      visibility: visible;
-  }
-  /* left or forward direction */
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
-  }
-  /* right or prev direction //t - previous slide direction last item animation fix */
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(100%, 0, 0);
-      visibility: visible;
-      display: block;
-      visibility: visible;
-  }
-}
