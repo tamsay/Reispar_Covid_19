@@ -97,7 +97,7 @@ const recievedNews = (newsdata) => {
     };
 }
 
-    fetch('    https://newsapi.org/v2/everything?q=covid-19 AND coronavirus&pageSize=8&apiKey=95652013248a41419ede93837e41b30d')
+    fetch('    https://newsapi.org/v2/everything?q=covid-19 AND coronavirus&pageSize=20&apiKey=95652013248a41419ede93837e41b30d')
     .then(function (response) {
         return response.json();
     })
