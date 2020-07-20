@@ -97,11 +97,12 @@ const recievedNews = (newsdata) => {
     };
 }
 
-    fetch('    https://newsapi.org/v2/everything?q=covid-19 AND coronavirus AND health&pageSize=20&apiKey=95652013248a41419ede93837e41b30d')
+    fetch('http://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=covid-19 AND coronavirus AND health&pageSize=20&apiKey=95652013248a41419ede93837e41b30d')
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
+      console.log(data)
        recievedNews(data)
     });
 
