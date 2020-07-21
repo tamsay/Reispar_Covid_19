@@ -55,6 +55,7 @@ body{
     font-family: 'Karla', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     width: 100%;
+    /* padding-top: 2.5em; */
 }
 
 header{
@@ -63,11 +64,17 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0.5rem;
-    margin: 0px;
+    padding: 0.25rem;
+    margin: 0px 0px 15px 0px;
+    background-color: rgba(1, 1, 20, 0.9);
+
+}
+#siteHeading h1{
+  color: white;
 }
 .navbar{
-  padding: 5px;
+  padding: 0px 10px;
+  width: 100%;
 }
 
 .nav-item{
@@ -77,33 +84,44 @@ header{
   background-color: rgb(57, 123, 247);
   border-radius: 5px 5px 0px 0px;  
 }
-
+.navbar-nav{
+  border-bottom: 3px solid white;
+}
 li:hover{
   background-color: black;
-  
 /* background-color: rgb(157, 252, 165); */
 }
-#logo{
-  width: auto;
-  text-align: left;
+.navbar-brand{
+  width: 15%;
 }
 #logo img{
-  width: 35%;
-  height: 35%;
-
+  width: 100%;
+  height: 100%;
 }
 #navbarTogglerDemo01{
   padding: 0px;
   margin: 0px;
-  border-bottom: 3px solid white;
+  justify-content: flex-end;
+
 }
 
 
 @media all and (max-width: 992px){
-  .navbar{
-    padding: 0px;
+  header{
+    padding: 0em;
     margin: 0px;
-    width: 110px;
+  }
+  #logo img{
+    width: 100%;
+    height: 100%;
+  }
+  .navbar-brand{
+    width: 30%;
+  }
+  .navbar{
+    padding: 2.55px 10px;
+    margin: 0px;
+    width: 100%;
   }
   
   #navbarTogglerDemo01{
@@ -111,18 +129,25 @@ li:hover{
     margin: 0px;
     border-bottom: 2px solid white;
     box-sizing: border-box;
+    background-color: black;
+    /* height: 50vh; */
   }
   .nav-item{
+    width: 100%;
     margin: 0px 0px 2px 0px;
     font-size: 15px;
     background-color: rgb(57, 123, 247);
     border-radius: 5px 0px 0px 0px;
     color: black;
 }
-
-.navbar-toggler-icon{
-  background-color: white;
+.navbar-toggler{
+  padding: 0%;
+    margin: 0%;
 }
+  .navbar-toggler-icon{
+    background-color: white;
+    
+  }
 }
 
 #resultSection{
@@ -275,22 +300,6 @@ li:hover{
       font-size: 1.5em;
     }
 }
-
-.imageLink {
-  width: 60%;
-  /* max-height: 50%; */
-  box-sizing: border-box;
-}
-.active{
-  /* width: 50%; */
-} 
-
-@media all and (max-width: 480px){
-  .imageLink{
-    width: 50%
-  }
-}
-
 
 footer{
   display: flex;
@@ -569,6 +578,7 @@ footer > p{
   border-radius: 10px;
   height: 320px;
   background-color: rgba(1, 1, 20, 0.99);
+  transition: transform 1s ease-in-out;
 }
 
 
@@ -576,7 +586,26 @@ footer > p{
 border: 1px solid rgb(80, 171, 247);
 padding: 5px;
 margin: 10px;
+animation-name: zoomIn;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+transform: scale(1.075);
+
 }
+
+@keyframes zoomIn{
+0% {
+  /* background-color: red; */
+  /* transform: scale(1); */
+}
+100% {
+  background-color: black;
+  /* transform: scale(1.1); */
+
+}
+}
+
 .sourceImage{
     width: 50%;
     margin: 0px 0px 5px 0px;
@@ -608,7 +637,7 @@ margin: 10px;
     margin: 10px 0px;
     padding-top: 10px;
     height: 280px;
-    background-color: rgba(1, 1, 20, 0.5);
+    background-color: rgba(1, 1, 20, 0.75);
   }
   .sourceHeading{
     font-size: 1.25em;
