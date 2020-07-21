@@ -577,10 +577,11 @@ footer > p{
   padding: 10px;
   border-radius: 10px;
   height: 320px;
-  background-color: rgba(1, 1, 20, 0.99);
+  background-color: rgba(1, 1, 20, 0.69);
   transition: transform 1s ease-in-out;
   border: 1px solid white;
-  box-shadow: white 2px 2px;
+  box-shadow: 2px 2px 10px white;
+  /* box-shadow: 5px 5px 5px 0 rgba(255, 2, 0, 0.82), 0 6px 20px 0 rgba(0, 255, 0, 0.69); */
 }
 
 
@@ -592,7 +593,7 @@ animation-name: zoomIn;
 animation-duration: 2s;
 animation-timing-function: ease-in-out;
 animation-fill-mode: forwards;
-transform: scale(1.075);
+transform: scale(1.05);
 
 }
 
@@ -640,7 +641,6 @@ transform: scale(1.075);
     padding-top: 10px;
     height: 300px;
     border: 1px solid white;
-    box-shadow: white 2px 2px;
     background-color: rgba(1, 1, 20, 0.75);
   }
   .sourceHeading{
