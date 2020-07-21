@@ -116,29 +116,35 @@ li:hover{
     height: 100%;
   }
   .navbar-brand{
-    width: 30%;
+    width: 25%;
   }
   .navbar{
     padding: 2.55px 10px;
     margin: 0px;
     width: 100%;
   }
-  
+  .navbar-nav{
+    /* width: fit-content; */
+    border-bottom: none;
+    /* background-color: red; */
+    background-color: rgba(1, 1, 20, 0.9);
+
+  }
   #navbarTogglerDemo01{
     padding: 0px;
     margin: 0px;
-    border-bottom: 2px solid white;
     box-sizing: border-box;
-    background-color: black;
-    /* height: 50vh; */
+    background-color: black;    
   }
   .nav-item{
-    width: 100%;
+    /* width: 10em; */
     margin: 0px 0px 2px 0px;
     font-size: 15px;
     background-color: rgb(57, 123, 247);
     border-radius: 5px 0px 0px 0px;
     color: black;
+    align-self: flex-end;
+
 }
 .navbar-toggler{
   padding: 0%;
@@ -203,6 +209,10 @@ li:hover{
   box-sizing: border-box;
 }
 @media all and (max-width: 1200px) {
+  #siteHeading h1{
+    /* font-size: 2.0em; */
+    margin: 0px;
+  }
   #resultSection{
     width: 90%;
   }
@@ -215,6 +225,10 @@ li:hover{
 }
 @media all and (max-width: 960px) {
   /* For mobile phones: */
+  #siteHeading h1{
+    font-size: 2.0em;
+    margin: 0px;
+  }
   #resultSection{
     width: 95%;
   }
@@ -227,6 +241,10 @@ li:hover{
 }
 @media all and (max-width: 640px) {
   /* For mobile phones: */
+  #siteHeading h1{
+    font-size: 1.75em;
+    margin: 0px;
+  }
   .iframe-container{
     padding-top: 57.5%;
   }
@@ -236,6 +254,9 @@ li:hover{
 }
 @media all and (min-width: 40px) and (max-width:480px) {
   /* For mobile phones: */
+  #siteHeading h1{
+    font-size: 1.5em;
+  }
   #resultSection{
     width: 100%;
   }
@@ -498,15 +519,14 @@ footer > p{
   @media only screen and (max-width: 640px) {
     /* For mobile phones: */
     .tabs{
-        width: 90%;
-        font-size: 0.70em;
+        width: 95%;
         justify-content: center;
         padding: 0px;
         margin: 0px;
     }
     .tab {
       padding: 0px 2px;
-      /* font-size: 0.75em; */
+      font-size: 1.3em;
       text-align: center;
       width: fit-content;
       margin: 0px 2px;
@@ -515,15 +535,14 @@ footer > p{
   @media only screen and (max-width: 480px) {
     /* For mobile phones: */
     .tabs{
-        width: 70%;
+        width: 100%;
         padding: 0px;
         margin: 0px;
-        font-size: 0.7em;
         justify-content: space-around;
     }
     .tab {
       padding: 0px 1px;
-      font-size: 0.75em;
+      font-size: 0.95em;
       text-align: center;
       width: fit-content;
       margin: 0px 1px;
